@@ -1,8 +1,8 @@
 class Doctor < ActiveRecord::Base
   # association
-  has_many :interns # a doctor has_many interns
-  has_many :consultations # a doctor has_many consultations
-  has_many :patients, through: :consultations # a doctor has_many patients through consultations
+  has_many :interns # a doctor has_many interns (um doctor tem muitos residentes)
+  has_many :consultations # a doctor has_many consultations (um doctor tem muitas consultas)
+  has_many :patients, through: :consultations # a doctor has_many patients through consultations (um doctor tem muitos pacientes passando por consultas)
 
   # validation
   validates :last_name, presence: true # validar que o last_name existe, está presente na criação do Doctor.new()

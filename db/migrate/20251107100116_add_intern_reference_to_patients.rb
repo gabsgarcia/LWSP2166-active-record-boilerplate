@@ -1,5 +1,5 @@
 # TIMESTAMP=`rake db:timestamp`
-# touch db/migrate/${TIMESTAMP}_add_age_to_patients.rb
+# touch db/migrate/${TIMESTAMP}_add_intern_reference_to_patients.rb
 
 class AddInternReferenceToPatients < ActiveRecord::Migration[7.0]
   def change
